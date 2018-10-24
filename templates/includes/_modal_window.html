@@ -1,0 +1,84 @@
+<!--MODAL WINDOW-->
+<div class="cd-user-modal"> <!-- this is the entire modal form, including the background -->
+		<div class="cd-user-modal-container"> <!-- this is the container wrapper -->
+			<ul class="cd-switcher">
+				<li><a href="#0">Авторизация</a></li>
+				<li><a href="#0">Регистрация</a></li>
+			</ul>
+
+			<div id="cd-login"> <!-- Авторизация -->
+				<!-- <form role="form" action="/login/submit" method="post" class="cd-form"> --> <!--whis out ajax-->
+                <form role="form" method="post" class="cd-form" id="authorizationForm"> <!--whis ajax-->
+                    
+                   <p class="fieldset">
+                        <label class="image-replace cd-email" for="signin-email">E-mail</label>
+                        <input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail" name="signin-email" required="required">
+                        <span id="cd-error-message-email-signin" class="cd-error-message"></span>
+                    </p>
+
+					<p class="fieldset">
+						<label class="image-replace cd-password" for="signin-password">Password</label>
+						<input class="full-width has-padding has-border" id="signin-password" type="password"  placeholder="Password" name="password" required="required">
+						<a href="#0" class="hide-password">Show</a>
+						<span id="cd-error-message-password-signin" class="cd-error-message"></span>
+					</p>
+
+					<!--<p class="fieldset">
+						<input type="checkbox" id="remember-me" checked>
+						<label for="remember-me">Remember me</label>
+					</p>-->
+                        
+					<p class="fieldset">
+						<input class="full-width" type="submit" value="Войти" name="submit">
+					</p>
+				</form>
+				
+				
+			</div> <!-- cd-login -->
+<!-- ***************************************** Регистрация ************************************************** -->
+			<div id="cd-signup"> 
+			<!--<form role="form" action="/register/submit" method="post" class="cd-form" id="registrForm">--> <!--whis out ajax-->
+            <form role="form" method="post" class="cd-form" id="registrForm"> <!--whis ajax-->				
+					<p class="fieldset">
+						<label class="image-replace cd-username" for="signup-username">Username</label>
+						<input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Username" name="signup-username" required="required">
+						<span class="cd-error-message" id="cd-error-message-username-signup"></span>
+					</p>
+
+                    <p class="fieldset">
+                        <label class="image-replace cd-email" for="signup-email">E-mail</label>
+                        <input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="E-mail" name="signup-email" equired="required">
+                        <span class="cd-error-message" id="cd-error-message-email-signup"></span>
+                    </p>
+                    
+					<p class="fieldset">
+						<label class="image-replace cd-password" for="signup-password">Password</label>
+						<input class="full-width has-padding has-border" id="signup-password" type="password"  placeholder="Password" name="signup-password" required="required">
+						<a href="#0" class="hide-password">Show</a>
+						<span class="cd-error-message"></span>
+					</p>
+					<!--<p class="fieldset">
+						<input type="checkbox" id="accept-terms">
+						<label for="accept-terms">I agree to the <a href="#0">Terms</a></label>
+					</p>
+                     -->
+                    <div class="fieldset captcha">
+                       <div>
+                            <div id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha" data-sitekey="{{SITE_KEY}}"></div>
+                            <span class="cd-error-message" id="cd-error-message-captcha-signup"></span>
+                        </div>
+                        
+                        
+                    </div>
+					<p class="fieldset">
+						<input class="full-width has-padding" type="submit" value="Создать аккаунт" name="submit" id="submit_reg" no-disabled>
+					</p>
+				</form>
+
+			</div> <!-- cd-signup -->
+
+			
+		</div> <!-- cd-user-modal-container -->
+	</div> <!-- cd-user-modal -->
+    
+    <!--MODAL WINDOW-->

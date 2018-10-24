@@ -1,0 +1,119 @@
+<!--MODAL WINDOW-->
+<div class="cd-user-modal"> <!-- this is the entire modal form, including the background -->
+		<div class="cd-user-modal-container"> <!-- this is the container wrapper -->
+			<ul class="cd-switcher">
+				<li><a href="#0">Авторизация</a></li>
+				<li><a href="#0">Регистрация</a></li>
+			</ul>
+
+			<div id="cd-login"> <!-- Авторизация -->
+				<!-- <form role="form" action="/login/submit" method="post" class="cd-form"> --> <!--whis out ajax-->
+                <form role="form" method="post" class="cd-form" id="authorizationForm"> <!--whis ajax-->
+                    
+                    <!--Вкладки выбора способа авторизации-->
+                    <div class="tabs">
+                        <input type="radio" name="inset" value="" id="tab_1_auth" checked>
+                        <label for="tab_1_auth">Email</label>
+
+                        <input type="radio" name="inset" value="" id="tab_2_auth">
+                        <label for="tab_2_auth">Telegram</label>
+
+                        <div id="txt_1_auth">
+                            <p class="fieldset">
+                                <label class="image-replace cd-email" for="signin-email">E-mail</label>
+                                <input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail" name="signin-email" required="required">
+                                <span id="cd-error-message-email-signin" class="cd-error-message"></span>
+                            </p>
+                        </div>
+                        <div id="txt_2_auth">
+                            <p class="fieldset">
+                                <label class="image-replace cd-email" for="signin-telegram">Telegram id</label>
+                                <input class="full-width has-padding has-border" id="signin-telegram" type="text" placeholder="Telegram id" name="signin-telegram" required="required">
+                                <span class="cd-error-message">Error message here!</span>
+                            </p>
+                        </div>
+                    </div>
+
+					<p class="fieldset">
+						<label class="image-replace cd-password" for="signin-password">Password</label>
+						<input class="full-width has-padding has-border" id="signin-password" type="password"  placeholder="Password" name="password" required="required">
+						<a href="#0" class="hide-password">Show</a>
+						<span id="cd-error-message-password-signin" class="cd-error-message"></span>
+					</p>
+
+					<!--<p class="fieldset">
+						<input type="checkbox" id="remember-me" checked>
+						<label for="remember-me">Remember me</label>
+					</p>-->
+                        
+					<p class="fieldset">
+						<input class="full-width" type="submit" value="Войти" name="submit">
+					</p>
+				</form>
+				
+				
+			</div> <!-- cd-login -->
+<!-- ***************************************** Регистрация ************************************************** -->
+			<div id="cd-signup"> 
+			<!--<form role="form" action="/register/submit" method="post" class="cd-form" id="registrForm">--> <!--whis out ajax-->
+            <form role="form" method="post" class="cd-form" id="registrForm"> <!--whis ajax-->				
+					<p class="fieldset">
+						<label class="image-replace cd-username" for="signup-username">Username</label>
+						<input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Username" name="signup-username" required="required">
+						<span class="cd-error-message" id="cd-error-message-username-signup"></span>
+					</p>
+
+                    <!--Вкладки выбора способа регистрации-->
+                    <div class="tabs">
+                        <input type="radio" name="inset" value="" id="tab_1" checked>
+                        <label for="tab_1">Email</label>
+
+                        <input type="radio" name="inset" value="" id="tab_2">
+                        <label for="tab_2">Telegram</label>
+
+                        <div id="txt_1">
+                            <p class="fieldset">
+                                <label class="image-replace cd-email" for="signup-email">E-mail</label>
+                                <input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="E-mail" name="signup-email">
+                                <span class="cd-error-message" id="cd-error-message-email-signup"></span>
+                            </p>
+                        </div>
+                        <div id="txt_2">
+                            <p class="fieldset">
+                                <label class="image-replace cd-telegram" for="signup-telegram">Telegram id</label>
+                                <input class="full-width has-padding has-border" id="signup-telegram" type="text" placeholder="Telegram id" name="signup-telegram">
+                                <span class="cd-error-message"></span>
+                            </p>
+                        </div>
+                    </div>
+                    
+					<p class="fieldset">
+						<label class="image-replace cd-password" for="signup-password">Password</label>
+						<input class="full-width has-padding has-border" id="signup-password" type="password"  placeholder="Password" name="signup-password" required="required">
+						<a href="#0" class="hide-password">Show</a>
+						<span class="cd-error-message"></span>
+					</p>
+					<!--<p class="fieldset">
+						<input type="checkbox" id="accept-terms">
+						<label for="accept-terms">I agree to the <a href="#0">Terms</a></label>
+					</p>
+                     -->
+                    <div class="captcha">
+                       <div>
+                            <div id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha" data-sitekey="{{SITE_KEY}}"></div>
+                            <span class="cd-error-message" id="cd-error-message-captcha-signup"></span>
+                        </div>
+                        
+                    </div>
+					<p class="fieldset">
+						<input class="full-width has-padding" type="submit" value="Создать аккаунт" name="submit" id="submit_reg" no-disabled>
+					</p>
+				</form>
+
+			</div> <!-- cd-signup -->
+
+			
+		</div> <!-- cd-user-modal-container -->
+	</div> <!-- cd-user-modal -->
+    
+    <!--MODAL WINDOW-->

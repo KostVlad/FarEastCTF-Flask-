@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+{%if not user%}
+    ТЫ не зареган и попал сюда читерским путем! ИДИ ОТСЮДА!
+{%else%}
+    {%if user.isAdmin%}
+        {% include 'includes/_another_header.html' %}
+        Личный кабинет администратора {{user.username}} <br>
+        При загрузке новых изображений НЕ ЗАБЫВАЙТЕ сжать их, например через сервис: <a href="http://optimizilla.com" target="_blank">http://optimizilla.com/ru/</a> 
+        {% include 'includes/_AdminBarArticleSettings.html' %}
+
+    {%endif%}
+    {%if not user.isAdmin%}
+        {% include 'includes/_another_header.html' %}
+        {% include 'includes/_private_room_user.html' %}
+    {%endif%}
+{%endif%}
+
+{% endblock %}
